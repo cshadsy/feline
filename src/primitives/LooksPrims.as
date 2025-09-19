@@ -27,6 +27,7 @@ package primitives {
 	import blocks.*;
 	import interpreter.*;
 	import scratch.*;
+	import uiwidgets.DialogBox;
 
 public class LooksPrims {
 

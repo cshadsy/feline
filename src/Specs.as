@@ -72,6 +72,7 @@ public class Specs {
 		[10, "More Blocks",	procedureColor],
 		[11, "Parameter",	parameterColor],
 		[12, "List",		listColor],
+		[13, "Dialogs",     0x60a05c],
 		[20, "Extension",	extensionsColor],
 	];
 
@@ -393,6 +394,9 @@ public class Specs {
 		// other obsolete blocks from alpha/beta
 		["hide all sprites",					" ", 99, "hideAll"],
 		["user id",								"r", 99, "getUserId"],
+
+		// dialogs
+		["alert %s", " ", 13, "felineAlert", "Hello!"],
 
 	];
 }}
