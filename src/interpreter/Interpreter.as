@@ -477,6 +477,7 @@ public class Interpreter {
 		primTable["whenClicked"]		= primNoop;
 		primTable["whenSceneStarts"]	= primNoop;
 		primTable["wait:elapsed:from:"]	= primWait;
+		primTable["runPercentOfTheTime"] = primRunSometimes;
 		primTable["doForever"]			= function(b:*):* { startCmdList(b.subStack1, true); };
 		primTable["doRepeat"]			= primRepeat;
 		primTable["broadcast:"]			= function(b:*):* { broadcast(arg(b, 0), false); }
@@ -530,6 +531,12 @@ public class Interpreter {
 		for (op in primTable) {
 			if (allOps.indexOf(op) < 0) trace("Not in specs: " + op);
 		}
+	}
+
+	private function primRunSometimes(b:Block):void {
+    	if (b.subStack1 == null) return;
+    	if (Math.random() >= numarg(b, 0)) return;
+    	startCmdList(b.subStack1);
 	}
 
 	public function primNoop(b:Block):void { }

@@ -247,6 +247,7 @@ public class Specs {
 		["create clone of %m.spriteOnly",		" ", 6, "createCloneOf"],
 		["delete this clone",					"f", 6, "deleteClone"],
 		["-"],
+		["run %n% of the time",					"c", 6, "runPercentOfTheTime",  50],
 
 		// control - stage
 		["wait %n secs",						" ", 106, "wait:elapsed:from:",	1],
@@ -262,6 +263,8 @@ public class Specs {
 		["stop %m.stop",						"f", 106, "stopScripts", "all"],
 		["-"],
 		["create clone of %m.spriteOnly",		" ", 106, "createCloneOf"],
+		["-"],
+		["run %n% of the time",					"c", 106, "runPercentOfTheTime",  50],
 
 		// sensing
 		["touching %m.touching?",				"b", 7, "touching:",			"_mouse_"],
