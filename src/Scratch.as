@@ -75,7 +75,7 @@ import watchers.ListWatcher;
 
 public class Scratch extends Sprite {
 	// Version
-	public static const versionString:String = 'v461.2';
+	public static const versionString:String = 'v470.0';
 	public static var app:Scratch; // static reference to the app, used for debugging
 
 	// Display modes
@@ -89,7 +89,7 @@ public class Scratch extends Sprite {
 	public var isArmCPU:Boolean;
 	public var jsEnabled:Boolean = false; // true when the SWF can talk to the webpage
 	public var ignoreResize:Boolean = false; // If true, temporarily ignore resize events.
-	public var isExtensionDevMode:Boolean = false; // If true, run in extension development mode (as on ScratchX)
+	public var isExtensionDevMode:Boolean = true; // If true, run in extension development mode (as on ScratchX)
 	public var isMicroworld:Boolean = false;
 
 	public var presentationScale:Number;
@@ -625,6 +625,7 @@ public class Scratch extends Sprite {
 			if (StringUtil.endsWith(s, '.sb')) s = s.slice(0, -3);
 			else if (StringUtil.endsWith(s, '.sb2')) s = s.slice(0, -4);
 			else if (StringUtil.endsWith(s, '.sbx')) s = s.slice(0, -4);
+			else if (StringUtil.endsWith(s, '.fb2')) s = s.slice(0, -4);
 			else break;
 		}
 		stagePart.setProjectName(s);
@@ -1199,7 +1200,7 @@ public class Scratch extends Sprite {
 	public function exportProjectToFile(fromJS:Boolean = false, saveCallback:Function = null):void {
 		function squeakSoundsConverted():void {
 			scriptsPane.saveScripts(false);
-			var projectType:String = extensionManager.hasExperimentalExtensions() ? '.sbx' : '.sb2';
+			var projectType:String = extensionManager.hasExperimentalExtensions() ? '.sbx' : '.fb2';
 			var defaultName:String = StringUtil.trim(projectName());
 			defaultName = ((defaultName.length > 0) ? defaultName : 'project') + projectType;
 			var zipData:ByteArray = projIO.encodeProjectAsZipFile(stagePane);

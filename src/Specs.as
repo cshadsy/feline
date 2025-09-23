@@ -49,11 +49,11 @@ public class Specs {
 	public static const listCategory:int = 12;
 	public static const extensionsCategory:int = 20;
 
-	public static var variableColor:int = 0xEE7D16; // Scratch 1.4: 0xF3761D
-	public static var listColor:int = 0xCC5B22; // Scratch 1.4: 0xD94D11
-	public static var procedureColor:int = 0x632D99; // 0x531E99;
+	public static var variableColor:int = 0xF3761D; // Scratch 1.4: 0xF3761D
+	public static var listColor:int = 0xD94D11 // Scratch 1.4: 0xD94D11
+	public static var procedureColor:int = 0x531E99; // 0x531E99;
 	public static var parameterColor:int = 0x5947B1;
-	public static var extensionsColor:int = 0x4B4A60; // 0x72228C; // 0x672D79;
+	public static var extensionsColor:int = 0x72228C; // 0x72228C; // 0x672D79;
 
 	private static const undefinedColor:int = 0xD42828;
 
@@ -321,9 +321,13 @@ public class Specs {
 		["%n - %n",								"r", 8, "-",					"", ""],
 		["%n * %n",								"r", 8, "*",					"", ""],
 		["%n / %n",								"r", 8, "/",					"", ""],
+		["%n ^ %n",								"r", 8, "^",					"", ""],
+
 		["-"],
 		["pick random %n to %n",		"r", 8, "randomFrom:to:",		1, 10],
 		["-"],
+		["true",                                "b", 8, "true"                        ],
+		["false",                               "b", 8, "false"                       ],
 		["%s < %s",								"b", 8, "<",					"", ""],
 		["%s = %s",								"b", 8, "=",					"", ""],
 		["%s > %s",								"b", 8, ">",					"", ""],

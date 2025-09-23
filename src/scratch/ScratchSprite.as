@@ -556,7 +556,7 @@ public class ScratchSprite extends ScratchObj {
 			Scratch.app.log(LogLevel.INFO, 'sprite saved to file', {filename: file.name});
 		}
 		var zipData:ByteArray = new ProjectIO(Scratch.app).encodeSpriteAsZipFile(copyToShare());
-		var defaultName:String = objName + '.sprite2';
+		var defaultName:String = objName + '.fspr2';
 		var file:FileReference = new FileReference();
 		file.addEventListener(Event.COMPLETE, success);
 		file.save(zipData, defaultName);

@@ -772,6 +772,7 @@ public class ScratchRuntime {
 		app.oldWebsiteURL = '';
 		installProject(new ScratchStage());
 	}
+	
 
 	public function installNewProject():void {
 		installEmptyProject();
@@ -794,10 +795,10 @@ public class ScratchRuntime {
 
 		var filter:FileFilter;
 		if (Scratch.app.isExtensionDevMode) {
-			filter = new FileFilter('ScratchX Project', '*.sbx;*.sb;*.sb2');
+			filter = new FileFilter('ScratchX Project', '*.sbx;*.sb;*.sb2;*.fb2');
 		}
 		else {
-			filter = new FileFilter('Scratch Project', '*.sb;*.sb2');
+			filter = new FileFilter('Feline Project', '*.sb;*.sb2;*.fb2');
 		}
 		Scratch.loadSingleFile(fileLoadHandler, filter);
 	}
